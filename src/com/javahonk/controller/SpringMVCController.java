@@ -15,10 +15,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class SpringMVCController {
+	
 
     @RequestMapping(value = "/paginationDisplayTag.web", method = 
             RequestMethod.GET)
     public String printWelcome(@ModelAttribute("person") 
+    
+   
     Person person,BindingResult result, ModelMap model, 
     HttpServletRequest request,
             HttpServletResponse response) {
@@ -66,6 +69,9 @@ public class SpringMVCController {
 	}
         
         person.setPersonList(personsList);
+        
+        System.out.println("changed");
+        System.out.println("changed2");
         return "paginationDisplayTag";
 
     }
